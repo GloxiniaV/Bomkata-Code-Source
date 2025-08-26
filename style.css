@@ -1,0 +1,117 @@
+/* General page setup */
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif; /* Modern, rounded font */
+    background-color: #f4f1fa; /* Light lavender background like the reference */
+    color: #333;
+}
+
+/* Header section with the background image */
+.main-header {
+    height: 250px;
+    background-color: darkred; /* Fallback color if image fails */
+    
+    /* --- IMPORTANT: REPLACE WITH YOUR IMAGE URL --- */
+    background-image: url('banassets/defbanner.png'); /* Using a placeholder */
+    
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid #9a8c98;
+}
+
+/* Main content area */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -80px; /* Pulls the panel up over the header image */
+    position: relative;
+}
+
+/* The main white card for the menu */
+.menu-panel {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #e0e0e0;
+}
+
+.menu-panel h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #4a4e69;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.menu-panel p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Navigation container */
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Main button styling (Green) */
+.menu-button {
+    background-color: #28a745; /* Vibrant green like the 'Join' button */
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    border-bottom: 4px solid #1e7e34;
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: #2cbf4d;
+    transform: translateY(-2px);
+    border-bottom-width: 6px;
+}
+
+.menu-button:active {
+    transform: translateY(1px);
+    border-bottom-width: 3px;
+}
+
+/* Secondary button style (Gray) */
+.menu-button.secondary {
+    background-color: #f8f9fa;
+    color: #495057;
+    border-bottom: 4px solid #ced4da;
+}
+
+.menu-button.secondary:hover {
+    background-color: #e9ecef;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .main-header {
+        height: 200px;
+    }
+
+    main {
+        margin-top: -60px;
+        padding: 15px;
+    }
+    
+    .menu-panel {
+        padding: 25px 20px;
+    }
+
+    .menu-panel h2 {
+        font-size: 1.8em;
+    }
+}
